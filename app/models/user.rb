@@ -22,5 +22,10 @@ class User < ActiveRecord::Base
   # validates :location_x
   # validates :location_y
 
+  scope :recent,
+      order("created_at desc").limit(20)
+
+  scope :duplicate,
+      find_by facebook_id: params[:facebook_id]
 
 end

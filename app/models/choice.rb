@@ -24,5 +24,4 @@ class Choice < ActiveRecord::Base
   validates :count,
       numericality: true
 
-
 end
